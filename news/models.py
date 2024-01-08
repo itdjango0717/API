@@ -142,7 +142,7 @@ class Mashina(models.Model):
     Narxi = models.ForeignKey(Narxi, on_delete=models.CASCADE, null=True, blank=True)
     Manzil = models.ForeignKey(Manzil, on_delete=models.CASCADE, null=True, blank=True)
     Turi = models.ForeignKey(Turi, on_delete=models.CASCADE, null=True, blank=True)
-    Yana = models.OneToOneField(Yana, on_delete=models.CASCADE, null=True, blank=True)
+    Yana = models.ForeignKey(Yana, on_delete=models.CASCADE, null=True, blank=True)
     rasm = models.ManyToManyField(Rasm)
     Rang = models.ForeignKey(Rang, on_delete=models.CASCADE, null=True, blank=True)
     Peredacha = models.ForeignKey(Peredacha, on_delete=models.CASCADE, null=True, blank=True)
