@@ -12,8 +12,8 @@ class CarApiList(APIView):
     parser_classes = [MultiPartParser]
 
     def get(self, request):
-        m = Mashina.objects.all()
-        dict_data = CarSerializer(m, many=True)
+        t = Mashina.objects.all()
+        dict_data = CarSerializer(t, many=True)
 
         return Response(dict_data.data)
 
@@ -23,6 +23,6 @@ class CarApiList(APIView):
         serializer = CarSerializer(data=request.data)
         if serializer.is_valid():
             m = serializer.save()
-            return Response(serializer.data)
+            return Response(m.data)
         return Response(serializer.errors)
 
