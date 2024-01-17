@@ -76,4 +76,3 @@ class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mashina
         fields = ['id', 'rusumi', 'Yoqilgi', 'Narxi', 'Turi', 'Yana', 'rasm', 'Rang', 'Peredacha', 'Obyom']
-
